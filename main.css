@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+i {
+    pointer-events: none;
+}
+
+div.btnbg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  padding: 3rem;
+  background: radial-gradient(#191919ce, #1919193f);
+  border-radius: 3rem;
+}
+
+header h1 {
+  position: relative;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+header h1::first-letter {
+    color: teal;
+    font-size: 4rem;
+}
+
+header,
+form {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: teal;
+}
+
+form input {
+  box-shadow: 2px 2px 12px #0009;
+  text-shadow: 1px 1px 2px #0005;
+}
+
+form button {
+  color: teal;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #191919;
+  color: teal;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.todo-container::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.todo-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+}
+ 
+.todo-container::-webkit-scrollbar-thumb {
+  background-color: teal;
+}
+
+.todo-list {
+  min-width: 70%;
+  list-style: none;
+}
+
+.todo {
+  margin: 1.5rem auto;
+  background-color: #fff;
+  color: #191919;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s ease;
+  box-shadow: 2px 2px 12px #0009;
+}
+
+.todo li {
+  margin-right: auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.complete-btn,
+.trash-btn {
+  background-color: teal;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: .8rem;
+  color: #212121;
+  margin: 0.2rem;
+  transition: all .2s ease;
+}
+
+.complete-btn:hover,
+.trash-btn:hover {
+    background-color: #212121;
+    color: teal;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.fall {
+    transform: translateY(3vh) rotateX(70deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #212121;
+    background-color: #fff;
+    width: 12rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 2px 2px 12px #0009;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s ease;
+}
+
+.select::after {
+    content: '\25bc';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: teal;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .2s ease;
+}
+
+.select:hover::after {
+    background-color: #191919;
+    color: teal;
+}
